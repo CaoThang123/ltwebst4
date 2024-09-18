@@ -3,37 +3,27 @@ package vn.iotstar.models;
 import java.io.Serializable;
 import java.sql.Date;
 
-public class UserModel2 implements Serializable {
-	private int id;
+public class UserModel2 implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	private String username;
+	private String password;
 	private String email;
-	private String userName;
-	private String fullName;
-	private String passWord;
-	private String images;
-	private int roleid;
-	private String phone;
-	private Date createdDate;
+	
+	public UserModel2(String username, String password, String email) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+	}
 	public UserModel2() {
 		super();
 	}
-	public UserModel2(int id, String email, String userName, String fullName, String passWord, String images,
-			int roleid, String phone, Date createdDate) {
-		super();
-		this.id = id;
-		this.email = email;
-		this.userName = userName;
-		this.fullName = fullName;
-		this.passWord = passWord;
-		this.images = images;
-		this.roleid = roleid;
-		this.phone = phone;
-		this.createdDate = createdDate;
+	public String getUsername() {
+		return username;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getEmail() {
 		return email;
@@ -41,54 +31,18 @@ public class UserModel2 implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUserName() {
-		return userName;
+	public String getPassword() {
+		return password;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public String getFullName() {
-		return fullName;
-	}
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
-	public String getPassWord() {
-		return passWord;
-	}
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
-	}
-	public String getImages() {
-		return images;
-	}
-	public void setImages(String images) {
-		this.images = images;
-	}
-	public int getRoleid() {
-		return roleid;
-	}
-	public void setRoleid(int roleid) {
-		this.roleid = roleid;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public Date getCreatedDate() {
-		return createdDate;
-	}
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	@Override
 	public String toString() {
-		return "UserModel2 [id=" + id + ", email=" + email + ", userName=" + userName + ", fullName=" + fullName
-				+ ", passWord=" + passWord + ", avatar=" + images + ", roleid=" + roleid + ", phone=" + phone
-				+ ", createdDate=" + createdDate + "]";
+		return "UserModel2 [username=" + username + ", password=" + password + ", email=" + email + "]";
 	}
+	
+	
 	
 	
 }

@@ -10,6 +10,7 @@ import java.util.List;
 import vn.iotstar.configs.DBConnectSQL;
 import vn.iotstar.dao.IUserDao;
 import vn.iotstar.models.UserModel1;
+import vn.iotstar.models.UserModel2;
 
 
 public class UserDaoImpl extends DBConnectSQL implements IUserDao{
@@ -65,29 +66,10 @@ public class UserDaoImpl extends DBConnectSQL implements IUserDao{
 		return null;
 	}
 
-	@Override
-	public void insert(UserModel1 user) {
-String sql = "INSERT INTO users(id,username,password,email,fullname,images,phone,roleid,createDate)VALUES (?,?,?,?,?,?,?)";
+	
 		
-		try {
-			conn = super.getConnection();
-			
-			ps = conn.prepareStatement(sql);
-			ps.setInt(1,user.getId() );
-			ps.setString(2,user.getUsername() );
-			ps.setString(3,user.getPassword() );
-			ps.setString(4,user.getEmail() );
-			ps.setString(5,user.getImages() );
-			ps.setString(6,user.getFullname() );
-			
-			ps.executeUpdate();
-			
-			
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		
-	}
+	
 	@Override
 	public UserModel1 findById(int id) {
 		String sql = "SELECT * FROM users WHERE id = ? ";
@@ -119,5 +101,7 @@ String sql = "INSERT INTO users(id,username,password,email,fullname,images,phone
 			e.printStackTrace();
 		}
 	}
+
+
 
 }

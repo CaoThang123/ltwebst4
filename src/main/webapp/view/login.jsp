@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@taglib prefix="c" uri= "jakarta.tags.core"%>
+
+<%@taglib prefix="c" uri="jakarta.tags.core"%>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login Page</title>
 </head>
 <body>
      <form action="/ltwebb3/login" method="post">
      <c:if test="${alert !=null}">
-       <h3 class="alert alert danger">${alert}</h3>
+       <h3 class="alert alert-danger">${alert}</h3>
      </c:if>
 
   <div class="container">
@@ -26,11 +26,12 @@
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
+ 
 
+  <!-- Nút đăng ký mở trang register.jsp -->
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <button type="button" onclick="window.location.href='/ltwebb3/register'">Register</button>
+
   </div>
 </form>
 </body>
