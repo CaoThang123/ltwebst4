@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Register Page</title>
+    <title>Quên mật khẩu</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -40,11 +40,11 @@
 </head>
 <body>
     <div class="container">
-        <form action="/ltwebb3/register" method="post">
-            <h2 class="text-center">Tạo tài khoản mới</h2>
+        <form action="/ltwebb3/forgotpassword" method="post">
+            <h2 class="text-center">Quên mật khẩu</h2>
 
             <!-- Hiển thị thông báo nếu có alert -->
-            <c:if test="${alert != null}">
+            <c:if test="${not empty alert}">
                 <div class="alert alert-danger">${alert}</div>
             </c:if>
 
@@ -54,20 +54,20 @@
                 <input type="text" id="uname" name="uname" class="form-control" placeholder="Tên tài khoản" required>
             </div>
 
-            <!-- Mật khẩu -->
+            <!-- Mật khẩu mới -->
             <div class="form-group">
-                <label for="psw">Mật khẩu</label>
-                <input type="password" id="psw" name="psw" class="form-control" placeholder="Mật khẩu" required>
+                <label for="newpass">Mật khẩu mới</label>
+                <input type="password" id="newpass" name="newpass" class="form-control" placeholder="Nhập mật khẩu mới" required>
             </div>
 
-            <!-- Email -->
+            <!-- Nhập lại mật khẩu -->
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                <label for="confirmnewpass">Nhập lại mật khẩu</label>
+                <input type="password" id="confirmnewpass" name="confirmnewpass" class="form-control" placeholder="Nhập lại mật khẩu" required>
             </div>
 
-            <!-- Đăng ký -->
-            <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+            <!-- Đổi mật khẩu -->
+            <button type="submit" class="btn btn-primary btn-block">Đổi mật khẩu</button>
         </form>
     </div>
 

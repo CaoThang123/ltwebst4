@@ -52,6 +52,7 @@ public class LoginController extends HttpServlet {
 			// Đăng nhập thành công
 			HttpSession session = req.getSession(true);
 			session.setAttribute("account", user);
+			session.setAttribute("username", user.getUsername());
 			
 			// Nếu chọn Remember Me thì lưu cookie
 			if (isRememberMe) {
