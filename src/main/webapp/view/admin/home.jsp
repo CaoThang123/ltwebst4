@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <style>
-        /* Custom CSS for Adidas-style Homepage */
+       
         body {
             font-family: Arial, sans-serif;
         }
@@ -20,7 +20,7 @@
             font-size: 18px;
         }
         .hero {
-            background-image: url('https://example.com/adidas-banner.jpg'); /* Replace with an actual Adidas banner image */
+            background-image: url('https://example.com/adidas-banner.jpg'); 
             background-size: cover;
             background-position: center;
             height: 2vh;
@@ -79,6 +79,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="<%=request.getContextPath()%>/admin/updateprofile">Profile</a>
 
+<li class="nav-item active">
+    <a class="nav-link" href="<%=request.getContextPath()%>/login">Logout</a>
+</li>
 
 
                 </li>
